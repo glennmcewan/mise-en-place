@@ -1,4 +1,13 @@
 baseURL: "https://mise-en-place.netlify.com/"
 languageCode: "en-gb"
-title: "My Cookbook"
-theme: hugo-cards
+title: "Mise en Place"
+theme: cookbook
+
+menu:
+    main:
+      - identifier: recipes
+        name: Recipes
+        url: "/recipes/"
+      - identifier: about
+        name: About
+        url: "/about/"
