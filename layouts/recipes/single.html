@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="row">
+    <div class="col-md-8">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">{{ .Title }}</h1>
+            </header>
+
+            <div class="post-img">
+                {{ if .Params.img }}
+                <img width="600" src="{{ .Site.BaseURL}}images/{{ .Params.img }}" alt="{{ .Params.title }}">
+                {{ else }}
+                <img width="600" src="https://picsum.photos/640/360" alt="A Lovely Recipe">
+                {{ end }}
+            </div>
+
+            <div class="post-ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    {{ range $.Page.Params.ingredients }}
+                    <li>
+                        {{ . }}
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <div class="post-directions">
+                <h2>Directions</h2>
+                <ul>
+                    {{ range $.Page.Params.directions }}
+                    <li>
+                        {{ . }}
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
+
+            <div class="post-content">
+                {{ .Content }}
+            </div>
+        </article>
+    </div>
+</div>
+{{ end }}
