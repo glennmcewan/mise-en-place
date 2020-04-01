@@ -1,3 +1,4 @@
 baseURL: "http://localhost/"
 languageCode: "en-gb"
 title: "My Cookbook"
+theme: hugo-cards
